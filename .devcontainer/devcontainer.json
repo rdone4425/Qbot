@@ -1,5 +1,5 @@
 {
-  "name": "Python 3.8 Codespace",
+  "name": "Python 3.9 Codespace",
   "image": "mcr.microsoft.com/devcontainers/python:0-3.8",
 
   // 可选：添加一些常用的 VS Code 扩展
