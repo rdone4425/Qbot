@@ -1,17 +1,27 @@
 {
-  "name": "Python 3.9 Codespace",
-  "image": "mcr.microsoft.com/devcontainers/python:0-3.8",
+  "name": "Python 3.10 Codespace for Qbot",
+  
+  // 这是最关键的部分，指定了使用哪个预装了Python的镜像
+  // mcr.microsoft.com/devcontainers/python:0-3.10 表示使用 Python 3.10
+  // 你可以改成 :0-3.8, :0-3.9, :0-3.11 等
+  "image": "mcr.microsoft.com/devcontainers/python:0-3.10",
 
-  // 可选：添加一些常用的 VS Code 扩展
   "customizations": {
     "vscode": {
+      // 推荐安装的 VS Code 插件，环境建好后会自动安装
       "extensions": [
-        "ms-python.python",
-        "ms-python.vscode-pylance"
+        "ms-python.python",       // Python 官方插件
+        "ms-python.vscode-pylance"// 智能代码提示
       ]
     }
   },
 
-  // 可选：在容器创建后运行命令
-  "postCreateCommand": "python --version"
+  // (可选) 容器创建成功后自动执行的命令
+  // 这里我们让它打印一下 Python 版本，方便验证
+  "postCreateCommand": "python --version",
+
+  // (可选) 将终端的默认shell改成bash，更常用
+  "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+  }
 }
