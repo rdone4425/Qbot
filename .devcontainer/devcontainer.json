@@ -1,0 +1,17 @@
+{
+  "name": "Python 3.8 Codespace",
+  "image": "mcr.microsoft.com/devcontainers/python:0-3.8",
+
+  // 可选：添加一些常用的 VS Code 扩展
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+
+  // 可选：在容器创建后运行命令
+  "postCreateCommand": "python --version"
+}
